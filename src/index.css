@@ -1,13 +1,66 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 5% 15% 5% 15%;
+  border: 1px solid red;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.topping-component {
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid green;
+}
+
+.topping-header {
+  text-align: center;
+  justify-content: center;
+  font-family: 'Gochi Hand', cursive;
+  padding: 20px;
+}
+
+.topping {
+  border: 1px solid #262626;
+  box-shadow: 4px 4px 7px 2px rgba(0, 0, 0, 0.2);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 3%;
+  padding: 20px;
+  margin: 2% 6% 2% 6%;
+  max-width: 214px;
+  transition: 0.3s;
+}
+
+.topping-radio-button {
+  margin-left: 6%;
+  margin-bottom: 3%;
+  border-radius: 16%;
+}
+
+.topping-radio-button button {
+  background: none;
+  border: 1px solid #3f3f3f;
+  padding: 5px 15px 5px 15px;
+  font-size: 13px;
+  margin-left: 10px;
+  border-radius: 3%;
+  transition: 0.2s;
+}
+
+.topping-radio-button button:hover {
+  background: rgb(238, 238, 238); 
+}
+
+.topping-radio-button-selected {
+  background-color: rgb(219, 219, 219) !important;
+  border: 1px solid black !important;
+}
+
+.topping:hover {
+  transform: scale(1.02);
+}
+
+.topping-title {
+  font-family: 'Gochi Hand', cursive;
+}
+
+.topping-desc {
+  font-size: 13px;
+  margin-top: 8px;
 }
