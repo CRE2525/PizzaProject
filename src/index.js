@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { toppingData } from './data';
+import { recipeData } from './data';
 
 class Topping extends React.Component {
     constructor(props) {
@@ -36,8 +37,8 @@ class ToppingComponent extends React.Component {
         ascending ? n = n*-1 : n = n*1;
         let sortedToppingsList = this.state.toppings;
         sortedToppingsList.sort(function(a, b){
-            let keyA = a[searchParam ?? 'name'];
-            let keyB = b[searchParam ?? 'name'];
+            let keyA = a[searchParam];
+            let keyB = b[searchParam];
 
             let compareResult = 0;
             keyA < keyB ? compareResult = -n : compareResult = n;
@@ -97,24 +98,57 @@ class ToppingComponent extends React.Component {
     }
 }
 
+class RecipeItem extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            listItemDetails: this.props.listItemDetails,
+            itemClass: `${this.props.floatSide} recipe-item`,
+        }
+    }
+    render() {
+        console.log('[RecipeItem] this.state.listItemDetails = ', this.state.listItemDetails);
+        return (  
+            <div>
+                <div className={this.state.itemClass}>
+                    <div className='recipe-item-summary'>{this.state.listItemDetails.summary}</div>
+                    <div className='recipe-item-desc'>{this.state.listItemDetails.description}</div>
+                </div>
+            </div>      
+        );
+    }
+}
+
+class Recipe extends React.Component {
+    constructor(props) {
+        super(props); 
+        this.state = {
+            recipeItems: recipeData,
+        };
+    }
+    render() {
+        console.log('This is this.state.recipeItems ->', this.state.recipeItems);
+        return (
+            <div className='recipe-component'>
+                <h1 className='recipe-header'>Cast Iron Pizza</h1>
+                <div className='recipe-items'>
+                    {this.state.recipeItems.map(function(item, i){
+                        console.log('This is the loop. item=', item);
+                        let floatSide = 'float-left';
+                        i % 2 !== 0 ? floatSide = 'float-right' : floatSide = 'float-left';
+                        return <RecipeItem key={i} floatSide={floatSide} listItemDetails={item}/>
+                    })}
+                </div>
+            </div>
+        );
+    }
+}
+
 class PizzaComponent extends React.Component {
     render() {
         return (
         <div className="main">
-            <div className="recipe">
-                <div>My Recipe for Pan Pizza.</div>
-                <ul>
-                    <li>
-                        Boil some water
-                    </li>
-                    <li>
-                        Boil some ice
-                    </li>
-                    <li>
-                        Eat it.
-                    </li>
-                </ul>
-            </div>
+            <Recipe />
             <ToppingComponent />
         </div>
         );

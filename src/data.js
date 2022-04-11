@@ -43,4 +43,37 @@ const toppingData = [
     },
 ];
 
+const recipeData = [
+    { 
+        summary: 'Prepare Your Ingredients',
+        description: 'For one pizza, you will need 1 cup of flour, 1/2 cup of water, yeast, salt, olive, oil, and sugar.',
+    },
+    { 
+        summary: 'Prepare the Dough',
+        description: 'Combine the elements in the bowl and knead them together until a ball of dough forms.',
+    },
+    { 
+        summary: 'Refrigderate Dough',
+        description: 'Put the dough in the fridge for at least 1 day, ideally over 4 days. The longer it stays in the fridge, the better the flavour.',
+    },
+    { 
+        summary: 'Proof your Dough in the Pan',
+        description: 'Soon after taking the ball of dough out of the fridge, oil your cast iron pan and spread the dough into it. The let proof for around 30 minutes.',
+    },
+    { 
+        summary: 'Organize your Toppings',
+        description: 'Now is a fantastic time to grate the cheese, make tomato sauce, and cut up any toppings you want to put on the pizza.',
+    },
+    { 
+        summary: 'Start the pizza on the Oven',
+        description: 'On medium heat, start cooking your pizza on the oventop. Let the bottom brown - depending on the heat, around 5-10 minutes.',
+    },
+    { 
+        summary: 'Organize your Toppings',
+        description: 'Now is a fantastic time to grate the cheese, make tomato sauce, and cut up any toppings you want to put on the pizza.',
+    },
+];
+
+
+export { recipeData };
 export { toppingData };
