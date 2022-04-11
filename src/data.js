@@ -69,8 +69,8 @@ const recipeData = [
         description: 'On medium heat, start cooking your pizza on the oventop. Let the bottom brown - depending on the heat, around 5-10 minutes.',
     },
     { 
-        summary: 'Organize your Toppings',
-        description: 'Now is a fantastic time to grate the cheese, make tomato sauce, and cut up any toppings you want to put on the pizza.',
+        summary: 'Quickly add your toppings!',
+        description: 'Add your tomato sauce, cheese',
     },
 ];
 
